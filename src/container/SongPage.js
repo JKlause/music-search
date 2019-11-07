@@ -40,7 +40,7 @@ export default class SongPage extends Component {
 
     return (
       <>
-      <SongList songs={this.state.songs} artist={this.props.match.params.artist} />;
+        <SongList songs={this.state.songs} artist={this.props.match.params.artist} />;
       </>
     );
   }
