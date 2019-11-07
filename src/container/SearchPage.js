@@ -39,6 +39,7 @@ export default class SearchPage extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+    if(this.state.searchQuery === '') return;
     this.getArtists();
   }
 
