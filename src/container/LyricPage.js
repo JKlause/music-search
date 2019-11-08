@@ -24,7 +24,8 @@ export default class LyricPage extends Component {
     this.setState({ loading: true }); 
     getLyrics(this.props.match.params.title, this.props.match.params.artist)
       .then((res) => {
-        this.setState({ lyrics: res.lyrics, loading: false });
+        if(res.lyrics) this.setState({ lyrics: res.lyrics, loading: false });
+        else this.setState({ lyrics: 'No Lyrics Found', loading: false });
       });
   }
 
